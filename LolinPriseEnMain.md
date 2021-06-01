@@ -1,4 +1,5 @@
 # Prise en main de la carte Lolin
+![](https://i.imgur.com/dkb8YUKm.jpg) <br>
 
 Cette carte n'étant pas arduino friendly elle peut s'averer plus compliqué a maitriser. Il faut avant toute chose installé un driver particulier sur notre pc pour pouvoir utiliser le port usb de notre pc.
 http://www.wch-ic.com/downloads/CH341SER_EXE.html
