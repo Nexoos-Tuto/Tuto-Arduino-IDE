@@ -7,7 +7,7 @@ Dans l'onglet Fichier --> préférences --> gestionnaire de cartes supplémentai
 https://github.com/stm32duino/BoardManagerFiles/raw/master/package_stmicroelectronics_index.json 
 
 ## Deuxième étape 
-
+ 
 Dans l'onglet Outils --> type de cartes --> gestionnaire de cartes on recherche la marque de notre carte pour nous ce sera STM32 <br> 
 ![](https://i.imgur.com/4xAasgC.jpg) <br>
 
