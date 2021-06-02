@@ -1,6 +1,6 @@
 # Prise en main des cartes STM32 P-Nucleo64 WB55RG et la carte STM32 discovery.
-![](https://i.imgur.com/vZxhNgB.jpg) Nucleo 
-![](https://i.imgur.com/joGtdJh.jpg) Discovery 
+![](https://i.imgur.com/vZxhNgBm.jpg) Nucleo 
+![](https://i.imgur.com/joGtdJhm.jpg) Discovery 
 ## Première étape
 
 Dans l'onglet Fichier --> préférences --> gestionnaire de cartes supplémentaires il faut rajouter :
@@ -49,6 +49,6 @@ La led qui s'allumera ce trouve proche de l'alimentation micro usb que nous util
     }
     }
 ### câblage
-![](https://i.imgur.com/lIrhpUX.jpg) <br>
+![](https://i.imgur.com/lIrhpUXm.jpg) <br>
 
 Quand le bouton branché sur le pin digital 2 est appuyé la led s'allume le temps de la pression sinon celle-ci reste éteinte. 
