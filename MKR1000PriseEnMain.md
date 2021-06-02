@@ -107,3 +107,73 @@ Même pour un programme un peu plus complexe la carte réagi parfaitement bien c
     }
     delay(1);
     }
+    
+# Connexion au wifi 
+
+Pour ce faire nous allons utiliser un code qui nous connecte à notre réseau et qui vérifie toute les 10s la connexion  :
+
+    #include <WiFi101.h> //bibliotheque Wifi101
+    #include "infos_wifi.h" //fichier secret 
+
+    char ssid[] = SECRET_SSID;        // nom de la box
+    char pass[] = SECRET_PASS;        // mot de passe de la box
+    int status = WL_IDLE_STATUS;     // status de la wifi (en attendant qu'il se connecte)
+
+    void setup() {
+    Serial.begin(9600);  //initialise le moniteur série
+    while (!Serial);     //indique si le port de série spécifié est prêt.
+
+    // tant qu'il essaye de se connecter à la box
+    while (status != WL_CONNECTED) { //status essaye de se connecter
+        Serial.print("En attente de la connexion à: ");
+        Serial.println(ssid);
+        // infos pour se connecter
+        status = WiFi.begin(ssid, pass); //
+
+        // attend 10s avant de se connecter
+        delay(10000);
+    }
+
+    // si on est connecté ::
+    Serial.println("Connecté à la Box");
+    
+    Serial.println("----------------------------------------");
+    printData();
+    Serial.println("----------------------------------------");
+    }
+
+    void loop() {
+    // verifie connexion toutes les 10s
+    delay(10000);
+    printData();
+    Serial.println("----------------------------------------");
+    }
+
+    void printData() {
+    Serial.println("Infos Carte Arduino:");
+    // affiche adresse IP
+    IPAddress ip = WiFi.localIP();
+    Serial.print("IP Address: ");
+    Serial.println(ip);
+
+    Serial.println();
+    Serial.println("Infos Box:");
+    Serial.print("SSID: ");
+    Serial.println(WiFi.SSID());
+
+    // affiche le RSSI
+    long rssi = WiFi.RSSI();
+    Serial.print("signal strength (RSSI):");
+    Serial.println(rssi);
+
+    //type de chiffrement 
+    byte encryption = WiFi.encryptionType();
+    Serial.print("Encryption Type:");
+    Serial.println(encryption, HEX);
+    Serial.println();
+    }
+
+Le fichier infos_wifi.h est une fichier secret contenant deux lignes pour proteger nos identifiants sur quelqu'un recupère notre code :
+
+    #define SECRET_SSID " "
+    #define SECRET_PASS " "
