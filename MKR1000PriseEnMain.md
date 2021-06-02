@@ -108,7 +108,6 @@ Même pour un programme un peu plus complexe la carte réagi parfaitement bien c
     }
     delay(1);
     }
-
 # Connexion au wifi 
 
 Pour ce faire nous allons utiliser un code qui nous connecte à notre réseau et qui vérifie toute les 10s la connexion  :
