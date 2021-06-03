@@ -36,7 +36,7 @@ Pour commencer nous allons faire un simple Blink à la main :
 
 Sur la carte Lolin la led intégré est sur le pin 2 donc avec ce programme la led en haut de la carte s'allumera. 
 # Connexion au wifi 
-Ce programme va permettre à la carte lolin d'établir une connexion a notre réseau wifi la led s'allumera quand la carte sera connecté au wifi pour indiqué que tout fonctionne. 
+Ce programme va permettre à la carte lolin d'établir une connexion a notre réseau wifi alors la led s'allumera quand la carte sera connecté au wifi pour indiqué que tout fonctionne. 
     #include <ESP8266WiFi.h>
 
     const char* ssid="box";
@@ -49,12 +49,12 @@ Ce programme va permettre à la carte lolin d'établir une connexion a notre ré
     pinMode(ledPin,OUTPUT);
     digitalWrite(ledPin,LOW);
 
-    Serial.begin(9600);
+    Serial.begin(9600); //On démarre une communication avec le moniteur série les prints seront écrit dedans.
     Serial.println();
     Serial.print("Wifi connecting to ");
     Serial.println( ssid );
 
-    WiFi.begin(ssid,password);
+    WiFi.begin(ssid,password); //On démarre la connexion wifi en se servant de L'SSID et le Password
 
     Serial.println();
     Serial.print("Connecting");
