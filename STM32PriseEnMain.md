@@ -8,12 +8,12 @@ https://github.com/stm32duino/BoardManagerFiles/raw/master/package_stmicroelectr
 
 ## Deuxième étape 
  
-Dans l'onglet Outils --> type de cartes --> gestionnaire de cartes on recherche la marque de notre carte pour nous ce sera STM32 <br> 
+Dans l'onglet <br> Outils --> type de cartes --> gestionnaire de cartes <br> on recherche la marque de notre carte pour nous ce sera STM32 <br> 
 ![](https://i.imgur.com/4xAasgC.jpg) <br>
 
 ## Vérification 
 
-Pour la carte P-Nucleo64 WB55RG bien pensé de vérifier les caractéristique comme sur le screen ci-dessous et le câble utilisé peux fonctionner avec la discovery mais pas la nucleo donc aussi bien verifier les câbles <br>
+Pour la carte P-Nucleo64 WB55RG il faudrait bien pensé de vérifier les caractéristiques comme sur l'image ci-dessous. Le câble utilisé peux fonctionner avec la discovery mais pas la nucleo donc aussi il faut pensé bien verifier les câbles <br>
 ![](https://i.imgur.com/vFOXm7b.png) <br>
 
 Pour la carte Discovery pareil bien vérifier les caractéristique <br>
@@ -32,7 +32,7 @@ Pour commencer nous allons faire un simple Blink :
     digitalWrite(LED_BUILTIN, LOW);    
     delay(100);                       
     }
-La led qui s'allumera ce trouve proche de l'alimentation micro usb que nous utiliserons elle est facilement voyante pour la discovery pour la nucleo elle se trouve juste a cote du bouton SW3. si celle-ci ne clignote pas verifiez les paramètres au dessus.
+La led se situe proche de l'alimentation micro usb pour la discovery tandis pour le nucléo se trouve juste a cote du bouton SW3. si celle-ci ne clignote pas verifiez les paramètres au dessus.
 ### bouton 
     int bouton = 0; 
     void setup(){
@@ -51,4 +51,4 @@ La led qui s'allumera ce trouve proche de l'alimentation micro usb que nous util
 ### câblage
 ![](https://i.imgur.com/lIrhpUXm.jpg) <br>
 
-Quand le bouton branché sur le pin digital 2 est appuyé la led s'allume le temps de la pression sinon celle-ci reste éteinte. 
+Quand le bouton branché sur le pin digital 2 est appuyé "alors" la led s'allume durant le temps de la pression du bouton sinon celle-ci restera éteinte 
