@@ -1,10 +1,10 @@
 # MKR1000 prise en main ! <br>
 ![](https://i.imgur.com/YfzdXIbm.jpg)<br>
-Pour bien débuter et utiliser la carte arduino MKR1000 il faut installer la bibliothèque qui permet de choisir notre carte. Pour ce faire on va dans l'onglet outils puis type de carte et gestionnaire de carte. On cherche le *nom* de notre carte puis on installe la biblithèque.
+Pour bien débuter et utiliser la carte arduino MKR1000 il faut installer la bibliothèque qui permet de detecter notre carte. Pour ce faire on va dans l'onglet *outils* puis *type de carte* et *gestionnaire de carte*. On cherche le *nom* de notre carte puis on installe la bibliothèque.
 ![Je suis le screen](https://i.imgur.com/pYETuny.jpg)
 
 ## Vérification 
-On vérifie bien le type de carte en ayant choisi la carte MKR1000 et le port celui-ci doit afficher le nom de la carte comme ceci : 
+Pour vérifier le type de carte, on va sélectionner notre carte comme on le ferait habituellement, c'est-à-dire en vérifiant le port où celui-ci doit nous afficher le nom de la carte comme ceci : 
 ![Imgur](https://i.imgur.com/54ZN6AQm.png)
 
 # Début des programmes ! 
@@ -23,10 +23,10 @@ Pour commencer nous allons faire un simple Blink à la main :
     Serial.println("test");
     }
 
-Contrairement au carte UNO généralement utilisé ici la led directement branché sur la carte est sur le PIN 6 ce programme fais donc clignotait la led et nous affiche dans le moniteur série (la petite loupe en haut a droite) le mot "test" histoire de vérifier si tout fonctionne bien. 
+Ici la led qui est directement branché sur la carte est sur le PIN 6(contrairement au autre Arduino).Ce  programme fais clignotait la led et nous affiche dans le moniteur série (la petite loupe en haut a droite) le mot "test" histoire de vérifier si tout fonctionne bien.
 
 ### Capteur IR
-Même pour un programme un peu plus complexe la carte réagi parfaitement bien ce programme a été fait pour la télécommande arduino fourni dans le kit de dev. Il faut bien évidemment pensé à installé la bibliothèque IRremote trouvable sur internet.
+Même pour un programme un peu plus complexe la carte réagi parfaitement bien ce programme a été fait pour la télécommande arduino fourni dans le kit de dev. Il faut bien évidemment pensé à installé la bibliothèque IRremote trouvable sur internet. Ce code étant fait pour la télécommande du kit il ne marchera pas avec une autre. pour faire fonctionner notre télécomande il faut avant tout réceptionner la première valeur que la télécommande envoie comme par exemple ma touche 0 la valeur renvoyé était FF6897 étant de l'héxadécimal on le note avec 0x devant et on peut dire à l'arduino que SI on reçoit FF6897 alors ça correspond à la touche 0 (à faire pour chaque touche).
 
     #include <IRremote.h>
 
