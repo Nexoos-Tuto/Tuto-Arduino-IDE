@@ -11,32 +11,32 @@ http://arduino.esp8266.com/stable/package_esp8266com_index.json
 
 ## troisième étape 
 
-Ensuite direction l'onglet outils --> type de carte --> gestionnaire de carte et on recherche le mot "esp" qui va nous permettre d'utiliser plusieurs type de carte différentes dont celle que nous souhaitons.
+Ensuite direction l'onglet <br> outils --> type de carte --> gestionnaire de carte <br> et on recherche le mot "esp" qui va nous permettre d'utiliser plusieurs type de carte différentes dont celle que nous souhaitons.
 La notre étant la carte NodeMcu 1.0 (ESP-12E Module)
 
 ### Vérification si tout est bien installé. 
 Le type de carte devrait affiché ceci une fois notre carte choisis. <br>
 ![](https://i.imgur.com/l7Suz4i.jpg) <br>
-Pour vérifier si nous avons le bon port COM de choisis : 
+Pour vérifier si nous avons le bon port COM de choisis : <br>
 Menu Windows --> gestionnaire de périphériques --> PORT (COM et LPT) --> le driver s'appellent CH340 --> verifier si les numéro de port sont les mêmes entre le gestionnaire et arduino.
 
 # Début des programmes !
 Pour commencer nous allons faire un simple Blink à la main : 
 ### Blink
     void setup(){
-    pinMode(2,OUTPUT);
+    pinMode(2,OUTPUT); //On déclare le pin de la led. 
     }
  
     void loop(){
-    digitalWrite(2,HIGH);
-    delay(1000);
-    digitalWrite(2,LOW);
+    digitalWrite(2,HIGH); //On va allumer la led 
+    delay(1000); //pause de 1sec
+    digitalWrite(2,LOW); //On éteint la LED
     delay(1000);
     }   
 
 Sur la carte Lolin la led intégré est sur le pin 2 donc avec ce programme la led en haut de la carte s'allumera. 
 # Connexion au wifi 
-Ce programme va permettre à la carte lolin d'établir une connexiona notre réseau wifi la led s'allumera quand la carte sera connecté au wifi pour indiqué que tout fonctionne. 
+Ce programme va permettre à la carte lolin d'établir une connexion a notre réseau wifi la led s'allumera quand la carte sera connecté au wifi pour indiqué que tout fonctionne. 
     #include <ESP8266WiFi.h>
 
     const char* ssid="box";
