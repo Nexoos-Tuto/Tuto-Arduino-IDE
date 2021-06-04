@@ -16,7 +16,7 @@ Dans l'onglet <br> Outils --> type de cartes --> gestionnaire de cartes <br> on 
 Pour la carte P-Nucleo64 WB55RG il faudrait bien pensé de vérifier les caractéristiques comme sur l'image ci-dessous. Le câble utilisé peux fonctionner avec la discovery mais pas la nucleo donc aussi il faut pensé bien verifier les câbles <br>
 ![](https://i.imgur.com/vFOXm7b.png) <br>
 
-Pour la carte Discovery pareil bien vérifier les caractéristique <br>
+Pour la carte Discovery pareil bien vérifier les caractéristiques <br>
 ![](https://i.imgur.com/SPAwQ02.png)
 
 # Début des programmes ! 
