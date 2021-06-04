@@ -1,10 +1,10 @@
 # MKR1000 prise en main ! <br>
 ![](https://i.imgur.com/YfzdXIbm.jpg)<br>
-Pour bien débuter et utiliser la carte arduino MKR1000 il faut installer la bibliothèque qui permet de detecter notre carte. Pour ce faire on va dans l'onglet *outils* puis *type de carte* et *gestionnaire de carte*. On cherche le *nom* de notre carte puis on installe la bibliothèque.
+Pour bien débuter et utiliser la carte arduino MKR1000 il faut installer la bibliothèque qui permet de détecter notre carte. Pour ce faire on va dans l'onglet *outils* puis *type de carte* et *gestionnaire de carte*. On cherche le *nom* de notre carte puis on installe la bibliothèque.
 ![Je suis le screen](https://i.imgur.com/pYETuny.jpg)
 
 ## Vérification 
-Pour vérifier le type de carte, on va sélectionner notre carte comme on le ferait habituellement, c'est-à-dire en vérifiant le port où celui-ci doit nous afficher le nom de la carte comme ceci : 
+Pour vérifier le type de carte, nous allons nous rendre dans l'onglet *outils* puis *type de carte* qui doit donc avoir un affichage comme ceci : <br>
 ![Imgur](https://i.imgur.com/54ZN6AQm.png)
 
 # Début des programmes ! 
@@ -23,10 +23,10 @@ Pour commencer nous allons faire un simple Blink à la main :
     Serial.println("test");
     }
 
-Ici la led qui est directement branché sur la carte est sur le PIN 6(contrairement au autre Arduino).Ce  programme fais clignotait la led et nous affiche dans le moniteur série (la petite loupe en haut a droite) le mot "test" histoire de vérifier si tout fonctionne bien.
+Ici la led qui est directement branchée sur la carte, sur le PIN 6(contrairement aux autres Arduino).Ce  programme fait clignoter la led et nous affiche dans le moniteur série (la petite loupe en haut à droite) le mot "test" histoire de vérifier si tout fonctionne bien.
 
 ### Capteur IR
-Même pour un programme un peu plus complexe la carte réagi parfaitement bien ce programme a été fait pour la télécommande arduino fourni dans le kit de dev. Il faut bien évidemment pensé à installé la bibliothèque IRremote trouvable sur internet. Ce code étant fait pour la télécommande du kit il ne marchera pas avec une autre. pour faire fonctionner notre télécomande il faut avant tout réceptionner la première valeur que la télécommande envoie comme par exemple ma touche 0 la valeur renvoyé était FF6897 étant de l'héxadécimal on le note avec 0x devant et on peut dire à l'arduino que SI on reçoit FF6897 alors ça correspond à la touche 0 (à faire pour chaque touche).
+Même pour un programme un peu plus complexe la carte réagi parfaitement bien ce programme a été fait pour la télécommande arduino fourni dans le kit de dev. Il faut bien évidemment penser à installer la bibliothèque IRremote trouvable sur internet. Ce code étant fait pour la télécommande du kit il ne marchera pas avec une autre. pour faire fonctionner notre télécomande il faut avant tout réceptionner la première valeur que la télécommande envoie comme par exemple ma touche 0 la valeur renvoyé était FF6897 étant de l'héxadécimal on le note avec 0x devant et on peut dire à l'arduino que SI on reçoit FF6897 alors ça correspond à la touche 0 (à faire pour chaque touche).
 
     #include <IRremote.h>
 
@@ -110,7 +110,7 @@ Même pour un programme un peu plus complexe la carte réagi parfaitement bien c
     }
 # Connexion au wifi 
 
-Pour ce faire nous allons utiliser un code qui nous connecte à notre réseau et qui vérifie toute les 10s la connexion  :
+Pour ce faire nous allons utiliser un programme qui nous connecte à notre réseau et qui vérifie toute les 10s la connexion  :
 
     #include <WiFi101.h> //bibliotheque Wifi101
     #include "infos_wifi.h" //fichier secret 
@@ -173,7 +173,7 @@ Pour ce faire nous allons utiliser un code qui nous connecte à notre réseau et
     Serial.println();
     }
 
-Le fichier infos_wifi.h est une fichier secret contenant deux lignes pour proteger nos identifiants sur quelqu'un recupère notre code :
+Le fichier infos_wifi.h est une fichier secret contenant deux lignes pour proteger nos identifiants si quelqu'un recupère notre code :
 
     #define SECRET_SSID " "
     #define SECRET_PASS " "
