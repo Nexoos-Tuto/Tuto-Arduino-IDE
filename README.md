@@ -1,6 +1,6 @@
 # Tuto
 
-Ce tuto à pour but de vous aidez pour utiliser différentes carte avec le logiciel ARDUINO IDE 
+Ce tuto est utile pour vous aidez à utiliser différentes carte avec le logiciel ARDUINO IDE 
 
 ### liste des cartes de ce tuto 
 
