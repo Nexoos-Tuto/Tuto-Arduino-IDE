@@ -1,7 +1,7 @@
 # Prise en main de la carte Lolin
 ![](https://i.imgur.com/dkb8YUKm.jpg) <br>
 
-Cette carte n'étant pas arduino friendly elle peut s'averer plus compliqué a maitriser. Il faut avant toute chose installé un driver particulier sur notre pc pour pouvoir utiliser le port usb de notre pc.
+Cette carte n'étant pas arduino friendly elle peut s'averer plus compliqué a maitriser. Il faut avant tout installé un driver particulier sur notre pc pour pouvoir utiliser le port usb de notre pc.
 http://www.wch-ic.com/downloads/CH341SER_EXE.html
 
 ## deuxième étape
@@ -11,14 +11,15 @@ http://arduino.esp8266.com/stable/package_esp8266com_index.json
 
 ## troisième étape 
 
-Ensuite direction l'onglet <br> outils --> type de carte --> gestionnaire de carte <br> et on recherche le mot "esp" qui va nous permettre d'utiliser plusieurs type de carte différentes dont celle que nous souhaitons.
-La notre étant la carte NodeMcu 1.0 (ESP-12E Module)
+Ensuite direction l'onglet <br> outils --> type de carte --> gestionnaire de carte <br> et on recherche le mot "esp" qui va nous permettre d'utiliser plusieurs types de cartes différentes dont celle que nous souhaitons.
+La nôtre étant la carte NodeMcu 1.0 (ESP-12E Module)
 
 ### Vérification si tout est bien installé. 
-Le type de carte devrait affiché ceci une fois notre carte choisis. <br>
+Le *type de carte* devrait afficher ceci une fois notre carte choisis. <br>
 ![](https://i.imgur.com/l7Suz4i.jpg) <br>
 Pour vérifier si nous avons le bon port COM de choisis : <br>
-Menu Windows --> gestionnaire de périphériques --> PORT (COM et LPT) --> le driver s'appellent CH340 --> verifier si les numéro de port sont les mêmes entre le gestionnaire et arduino.
+Menu Windows --> gestionnaire de périphériques --> PORT (COM et LPT) --> le driver s'appelle CH340 <br>
+verifier si les numéro de port sont les mêmes entre le gestionnaire et arduino.
 
 # Début des programmes !
 Pour commencer nous allons faire un simple Blink à la main : 
@@ -36,7 +37,7 @@ Pour commencer nous allons faire un simple Blink à la main :
 
 Sur la carte Lolin la led intégré est sur le pin 2 donc avec ce programme la led en haut de la carte s'allumera. 
 # Connexion au wifi 
-Ce programme va permettre à la carte lolin d'établir une connexion a notre réseau wifi alors la led s'allumera quand la carte sera connecté au wifi pour indiqué que tout fonctionne. 
+Ce programme va permettre à la carte lolin d'établir une connexion a notre réseau wifi alors la led s'allumera quand la carte sera connectée au wifi pour indiquer que tout fonctionne. 
     #include <ESP8266WiFi.h>
 
     const char* ssid="box";
