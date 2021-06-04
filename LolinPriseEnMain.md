@@ -19,7 +19,7 @@ Le *type de carte* devrait afficher ceci une fois notre carte choisis. <br>
 ![](https://i.imgur.com/l7Suz4i.jpg) <br>
 Pour vérifier si nous avons le bon port COM de choisis : <br>
 Menu Windows --> gestionnaire de périphériques --> PORT (COM et LPT) --> le driver s'appelle CH340 <br>
-verifier si les numéro de port sont les mêmes entre le gestionnaire et arduino.
+verifier si les numéros de port sont les mêmes entre le gestionnaire et arduino.
 
 # Début des programmes !
 Pour commencer nous allons faire un simple Blink à la main : 
