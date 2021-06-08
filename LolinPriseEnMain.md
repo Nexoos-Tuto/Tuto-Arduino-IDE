@@ -7,6 +7,7 @@ http://www.wch-ic.com/downloads/CH341SER_EXE.html
 ## deuxième étape
  
 Une fois sur notre logiciel arduino on va dans l'onglet fichier puis dans préférence et dans la ligne gestionnaire de carte supplémentaire on y rajoute cette ligne : 
+![](https://i.imgur.com/WJhQd3I.png)
 http://arduino.esp8266.com/stable/package_esp8266com_index.json 
 
 ## troisième étape 
