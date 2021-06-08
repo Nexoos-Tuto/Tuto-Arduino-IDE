@@ -26,7 +26,11 @@ Pour commencer nous allons faire un simple Blink à la main :
 Ici la led qui est directement branchée sur la carte, sur le PIN 6(contrairement aux autres Arduino).Ce  programme fait clignoter la led et nous affiche dans le moniteur série (la petite loupe en haut à droite) le mot "test" histoire de vérifier si tout fonctionne bien.
 
 ### Capteur IR
-Même pour un programme un peu plus complexe la carte réagit parfaitement bien ce programme a été fait pour la télécommande arduino fournie dans le kit de dev. Il faut bien évidemment penser à installer la bibliothèque IRremote trouvable sur internet. Ce code étant fait pour la télécommande du kit il ne marchera pas avec une autre. pour faire fonctionner notre télécomande il faut avant tout réceptionner la première valeur que la télécommande envoie comme par exemple ma touche 0 la valeur renvoyé était FF6897 étant de l'héxadécimal on le note avec 0x devant et on peut dire à l'arduino que SI on reçoit FF6897 alors ça correspond à la touche 0 (à faire pour chaque touche).
+Même pour un programme un peu plus complexe la carte réagit parfaitement bien ce programme a été fait pour la télécommande arduino fournie dans le kit de dev. Il faut bien évidemment penser à installer la bibliothèque IRremote trouvable sur internet si elle ne se trouve pas directement dans le logiciel arduino. Si non https://www.arduinolibraries.info/libraries/i-rremote à ajouter ici dans le logiciel : <br> 
+
+![](https://i.imgur.com/pYETuny.jpg)
+
+<br> Ce code étant fait pour la télécommande du kit il ne marchera pas avec une autre. pour faire fonctionner notre télécomande il faut avant tout réceptionner la première valeur que la télécommande envoie comme par exemple ma touche 0 la valeur renvoyé était FF6897 étant de l'héxadécimal on le note avec 0x devant et on peut dire à l'arduino que SI on reçoit FF6897 alors ça correspond à la touche 0 (à faire pour chaque touche).
 
     #include <IRremote.h>
 
